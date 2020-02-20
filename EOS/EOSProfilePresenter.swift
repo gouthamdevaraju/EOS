@@ -21,6 +21,35 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
     func fetchEOSProfile() {
         
         //Fetch profile
+        
+        let headers = [CONTENTTYPE : APPLICATION_JSON]
+        
+        let params = ["account_name" : "genialwombat"]
+        
+        _ = NetworkInterface.postRequest(.get_account, headers: headers as NSDictionary?, params: nil, payload: params, requestCompletionHander: {
+            
+            (success, data, response, error, header) -> (Void) in
+            
+            if success{
+                
+                do{
+                    
+                    let decoder = JSONDecoder()
+                    let response = try decoder.decode(AccountModel.self, from: data!)
+
+                    //Passing back values to ViewController to make use of the data.
+                    self.eos_profile_viewController?.accountData(account_data: response)
+                }
+                catch{
+                    
+                    print("Account model codable error: \(error)")
+                }
+            }
+            else{
+                //Handle API fetching failure case
+                
+            }
+        })
     }
     
     

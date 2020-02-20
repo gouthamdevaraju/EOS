@@ -19,6 +19,7 @@
 		4CD7436623FCE4010000ED21 /* EOSProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7436523FCE4010000ED21 /* EOSProfilePresenter.swift */; };
 		4CD7436823FCE40E0000ED21 /* EOSProfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7436723FCE40E0000ED21 /* EOSProfileProtocol.swift */; };
 		4CD7436A23FCE4240000ED21 /* EOSProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7436923FCE4240000ED21 /* EOSProfileModel.swift */; };
+		4CD7436C23FCE9260000ED21 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7436B23FCE9260000ED21 /* NetworkInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4CD7436523FCE4010000ED21 /* EOSProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSProfilePresenter.swift; sourceTree = "<group>"; };
 		4CD7436723FCE40E0000ED21 /* EOSProfileProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSProfileProtocol.swift; sourceTree = "<group>"; };
 		4CD7436923FCE4240000ED21 /* EOSProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSProfileModel.swift; sourceTree = "<group>"; };
+		4CD7436B23FCE9260000ED21 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CAF1E2223FF48440018777D /* EOSAccount */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7436023FCE3A20000ED21 /* Model */,
+				4CD7436123FCE3B00000ED21 /* Views */,
+				4CD7436223FCE3B60000ED21 /* Presenter */,
+			);
+			name = EOSAccount;
+			sourceTree = "<group>";
+		};
+		4CAF1E2323FF48670018777D /* NetworkInterface */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7436B23FCE9260000ED21 /* NetworkInterface.swift */,
+			);
+			name = NetworkInterface;
+			sourceTree = "<group>";
+		};
 		4CD7432023FCE33E0000ED21 = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +127,8 @@
 		4CD7432B23FCE33E0000ED21 /* EOS */ = {
 			isa = PBXGroup;
 			children = (
-				4CD7436223FCE3B60000ED21 /* Presenter */,
-				4CD7436123FCE3B00000ED21 /* Views */,
-				4CD7436023FCE3A20000ED21 /* Model */,
+				4CAF1E2223FF48440018777D /* EOSAccount */,
+				4CAF1E2323FF48670018777D /* NetworkInterface */,
 				4CD7432C23FCE33E0000ED21 /* AppDelegate.swift */,
 				4CD7432E23FCE33E0000ED21 /* SceneDelegate.swift */,
 				4CD7433223FCE33E0000ED21 /* Main.storyboard */,
@@ -299,6 +318,7 @@
 				4CD7436623FCE4010000ED21 /* EOSProfilePresenter.swift in Sources */,
 				4CD7436823FCE40E0000ED21 /* EOSProfileProtocol.swift in Sources */,
 				4CD7432D23FCE33E0000ED21 /* AppDelegate.swift in Sources */,
+				4CD7436C23FCE9260000ED21 /* NetworkInterface.swift in Sources */,
 				4CD7432F23FCE33E0000ED21 /* SceneDelegate.swift in Sources */,
 				4CD7433723FCE33E0000ED21 /* EOS.xcdatamodeld in Sources */,
 				4CD7436423FCE3CE0000ED21 /* EOSProfileViewController.swift in Sources */,

@@ -10,22 +10,21 @@ import UIKit
 
 class EOSProfileViewController: UIViewController {
 
+    //MARK: - Properties
+    var eosProfilePresenter : EOSProfilePresenter?
+    
+    //MARK: - ViewController Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Initialising presenter objects
+        self.eosProfilePresenter = EOSProfilePresenter(view: self)
+        
+        //Fetching profile data initially
+        fetchEOSProfileAPI()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -34,9 +33,20 @@ extension EOSProfileViewController: EOSProfileViewProtocol{
     //Initiate fetch EOS profile
     func fetchEOSProfileAPI() {
         
-        
+        //Fetching EOS account data
+        eosProfilePresenter?.fetchEOSProfile()
     }
     
+    //Got the account data. Plot the UI.
+    func accountData(account_data: AccountModel) {
+        
+        if let account_name = account_data.account_name{
+            print("Account name: \(account_name)")
+        }
+        else{
+            print("Account name not found")
+        }
+    }
     
     
 }

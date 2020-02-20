@@ -19,6 +19,6 @@ protocol EOSProfileViewProtocol: class {
     
     //For fetching EOS profile data
     func fetchEOSProfileAPI()
-    
+    func accountData(account_data: AccountModel)
     
 }
