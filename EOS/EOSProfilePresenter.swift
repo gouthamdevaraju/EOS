@@ -18,6 +18,7 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
         self.eos_profile_viewController = view
     }
     
+    //Fetching EOS Account data
     func fetchEOSProfile() {
         
         //Fetch profile
@@ -50,6 +51,14 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
                 
             }
         })
+    }
+    
+    func formula(){
+        
+        //
+        //RAM: 1142836 ÷ 2217255 = 0.51542831113246 = 51.542831113246%
+        //https://medium.com/if-let-swift-programming/how-to-create-a-stretchable-tableviewheader-in-ios-ee9ed049aba3
+        
     }
     
     
