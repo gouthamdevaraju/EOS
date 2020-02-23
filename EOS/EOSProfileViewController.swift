@@ -18,8 +18,29 @@ class EOSProfileViewController: UIViewController {
     @IBOutlet var buttonReceive: UIButton!
     
     @IBOutlet var viewNet: UIView!
+    @IBOutlet var labelNetUsed: UILabel!
+    @IBOutlet var labelNetTotal: UILabel!
+    @IBOutlet var labelNetStake: UILabel!
+    @IBOutlet var labelNetPercentage: UILabel!
+    @IBOutlet var progressNET: UIProgressView!
+    
     @IBOutlet var viewCpu: UIView!
+    @IBOutlet var labelCpuUsed: UILabel!
+    @IBOutlet var labelCpuTotal: UILabel!
+    @IBOutlet var labelCpuStake: UILabel!
+    @IBOutlet var labelCPUPercentage: UILabel!
+    @IBOutlet var progressCPU: UIProgressView!
+    
     @IBOutlet var viewRam: UIView!
+    @IBOutlet var labelRAMUsed: UILabel!
+    @IBOutlet var labelRAMTotal: UILabel!
+    @IBOutlet var labelRAMPercentage: UILabel!
+    @IBOutlet var progressRAM: UIProgressView!
+    
+    @IBOutlet var labelEOSTokenBalance: UILabel!
+    @IBOutlet var labelUSDollarValue: UILabel!
+    @IBOutlet var labelStaked: UILabel!
+    
     
     @IBOutlet var constraint_stack_bottom: NSLayoutConstraint!
     
@@ -53,18 +74,6 @@ extension EOSProfileViewController: EOSProfileViewProtocol{
         
         //Fetching EOS account data
         eosProfilePresenter?.fetchEOSProfile()
-    }
-    
-    //Got the account data. Plot the UI.
-    func accountData(account_data: AccountModel) {
-        
-        if let account_name = account_data.account_name{
-            
-            setNavigationTitle(stringAccountName: account_name)
-        }
-        else{
-            print("Account name not found")
-        }
     }
     
     //MARK: - Other Methods
@@ -144,6 +153,40 @@ extension EOSProfileViewController: EOSProfileViewProtocol{
     
     func setNavigationTitle(stringAccountName: String){
         title = stringAccountName
+    }
+    
+    func setEOSBalance(stringEOSBalance: String){
+        labelEOSTokenBalance.text = stringEOSBalance
+    }
+    
+    func setStakedValue(stringStakedValues: String) {
+        labelStaked.text = stringStakedValues
+    }
+    
+    func setNetStake(stringNetValue: String, stringNetUsed: String, stringNetTotal: String, percentage: Int) {
+        
+        labelNetUsed.text = stringNetUsed
+        labelNetTotal.text = stringNetTotal
+        labelNetStake.text = stringNetValue
+        labelNetPercentage.text = "\(String(percentage))%"
+        progressNET.progress = Float(percentage)/100.0
+    }
+    
+    func setCPUStake(stringCPUValue: String, stringCPUUsed: String, stringCPUTotal: String, percentage: Int) {
+        
+        labelCpuUsed.text = stringCPUUsed
+        labelCpuTotal.text = stringCPUTotal
+        labelCpuStake.text = stringCPUValue
+        labelCPUPercentage.text = "\(String(percentage))%"
+        progressCPU.progress = Float(percentage)/100.0
+    }
+    
+    func setRAMUsed(stringRAMUsed: String, stringRAMTotal: String, percentage: Int) {
+        
+        labelRAMUsed.text = stringRAMUsed
+        labelRAMTotal.text = stringRAMTotal
+        labelRAMPercentage.text = "\(String(percentage))%"
+        progressRAM.progress = Float(percentage)/100.0
     }
     
 }

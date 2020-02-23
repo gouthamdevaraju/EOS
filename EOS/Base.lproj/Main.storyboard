@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SuU-zO-6dl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,12 +51,28 @@
                                             <constraint firstAttribute="height" constant="30" id="8OO-46-w9F"/>
                                         </constraints>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkb-8Q-6Uk">
+                                        <rect key="frame" x="207" y="116" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vy9-YT-GNk">
+                                        <rect key="frame" x="207" y="128" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="Vy9-YT-GNk" firstAttribute="centerX" secondItem="wkb-8Q-6Uk" secondAttribute="centerX" id="7v1-0e-u8v"/>
+                                    <constraint firstItem="wkb-8Q-6Uk" firstAttribute="top" secondItem="aQz-PH-lNF" secondAttribute="top" constant="116" id="LHx-dZ-RwK"/>
                                     <constraint firstItem="C6t-rV-PQm" firstAttribute="leading" secondItem="aQz-PH-lNF" secondAttribute="leading" constant="20" id="Zes-OT-lF7"/>
                                     <constraint firstAttribute="trailing" secondItem="C6t-rV-PQm" secondAttribute="trailing" constant="20" id="a31-0l-Bgj"/>
+                                    <constraint firstItem="wkb-8Q-6Uk" firstAttribute="centerX" secondItem="aQz-PH-lNF" secondAttribute="centerX" id="gex-mp-9ga"/>
                                     <constraint firstAttribute="bottom" secondItem="C6t-rV-PQm" secondAttribute="bottom" constant="10" id="pWu-mQ-wDV"/>
+                                    <constraint firstItem="Vy9-YT-GNk" firstAttribute="top" secondItem="wkb-8Q-6Uk" secondAttribute="bottom" constant="12" id="yfE-ZV-tnZ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -88,8 +105,8 @@
                                 <color key="textColor" red="0.96549338100000004" green="0.49775499109999999" blue="0.28166779879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnX-bW-BgM">
-                                <rect key="frame" x="341.5" y="491" width="36.5" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnX-bW-BgM">
+                                <rect key="frame" x="378" y="491" width="0.0" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="mIe-TY-cqO"/>
                                 </constraints>
@@ -113,53 +130,53 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3oR-t9-JHg">
                                 <rect key="frame" x="20" y="521" width="386" height="250"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPL-en-pbK">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CPL-en-pbK">
                                         <rect key="frame" x="0.0" y="0.0" width="386" height="77.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snG-XP-eru">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="NET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snG-XP-eru">
                                                 <rect key="frame" x="8" y="10" width="28.5" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,555 KMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQK-wx-vjM">
-                                                <rect key="frame" x="45" y="14" width="41" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQK-wx-vjM">
+                                                <rect key="frame" x="45" y="14" width="0.0" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18K-fC-Ed4">
-                                                <rect key="frame" x="89" y="14" width="3.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18K-fC-Ed4">
+                                                <rect key="frame" x="48" y="14" width="3.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,555 KMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-rF-GqC">
-                                                <rect key="frame" x="96" y="14" width="41" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-rF-GqC">
+                                                <rect key="frame" x="55" y="14" width="0.0" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgi-I9-KF8">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgi-I9-KF8">
                                                 <rect key="frame" x="20.5" y="51" width="16" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="11"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLO-Kp-vb3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLO-Kp-vb3">
                                                 <rect key="frame" x="318.5" y="10.5" width="36.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currency_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-F8-Mx7">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="currency_icon" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-F8-Mx7">
                                                 <rect key="frame" x="357" y="12" width="17" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MeR-F8-Mx7" secondAttribute="height" multiplier="1:1" id="uOX-lH-Kl4"/>
                                                 </constraints>
                                             </imageView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-ui-9LK">
-                                                <rect key="frame" x="45" y="58.5" width="329" height="4"/>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-ui-9LK">
+                                                <rect key="frame" x="45" y="58.5" width="329" height="2"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="e03-7N-el9"/>
@@ -195,53 +212,53 @@
                                             <constraint firstItem="snG-XP-eru" firstAttribute="top" secondItem="CPL-en-pbK" secondAttribute="top" constant="10" id="sB0-0I-Hq8"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tvc-LI-rtS">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvc-LI-rtS">
                                         <rect key="frame" x="0.0" y="87.5" width="386" height="77.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="887-9q-p0C">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="CPU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="887-9q-p0C">
                                                 <rect key="frame" x="8" y="10" width="30" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,555 KMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7W-yb-wNO">
-                                                <rect key="frame" x="46.5" y="14" width="41" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7W-yb-wNO">
+                                                <rect key="frame" x="46.5" y="14" width="0.0" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-Ww-xtW">
-                                                <rect key="frame" x="90.5" y="14" width="3.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GB-Ww-xtW">
+                                                <rect key="frame" x="49.5" y="14" width="3.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,555 KMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMP-ns-UlP">
-                                                <rect key="frame" x="97.5" y="14" width="41" height="14.5"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMP-ns-UlP">
+                                                <rect key="frame" x="56.5" y="14" width="0.0" height="14.5"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayx-24-If2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayx-24-If2">
                                                 <rect key="frame" x="16" y="51" width="19" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="11"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39N-NO-ynb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39N-NO-ynb">
                                                 <rect key="frame" x="318.5" y="10.5" width="36.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currency_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-LL-8Zs">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="currency_icon" translatesAutoresizingMaskIntoConstraints="NO" id="XRb-LL-8Zs">
                                                 <rect key="frame" x="357" y="12" width="17" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="XRb-LL-8Zs" secondAttribute="height" multiplier="1:1" id="Qan-Dr-DI4"/>
                                                 </constraints>
                                             </imageView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-Mr-xuJ">
-                                                <rect key="frame" x="45" y="58.5" width="329" height="4"/>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKG-Mr-xuJ">
+                                                <rect key="frame" x="45" y="58.5" width="329" height="2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="322-oH-gWB"/>
                                                 </constraints>
@@ -286,73 +303,55 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,555 KMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-gj-sLn">
-                                                <rect key="frame" x="51" y="14" width="41" height="14"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-gj-sLn">
+                                                <rect key="frame" x="51" y="14" width="0.0" height="14"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zms-dR-q8d">
-                                                <rect key="frame" x="95" y="14" width="3.5" height="14"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                                <rect key="frame" x="54" y="14" width="3.5" height="14"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,555 KMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LJ-jO-eyb">
-                                                <rect key="frame" x="102" y="14" width="41" height="14"/>
-                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="9"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LJ-jO-eyb">
+                                                <rect key="frame" x="61" y="14" width="0.0" height="14"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="10"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jI-sw-Ykw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jI-sw-Ykw">
                                                 <rect key="frame" x="16.5" y="48.5" width="19" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="11"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rA-Mx-H9K">
-                                                <rect key="frame" x="319" y="10.5" width="36.5" height="19"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currency_icon" translatesAutoresizingMaskIntoConstraints="NO" id="L8w-8V-1O9">
-                                                <rect key="frame" x="357.5" y="12" width="16.5" height="16.5"/>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zoe-4z-3Pw">
+                                                <rect key="frame" x="45" y="55" width="329" height="3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="L8w-8V-1O9" secondAttribute="height" multiplier="1:1" id="YEh-Zi-1Y0"/>
-                                                </constraints>
-                                            </imageView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Zoe-4z-3Pw">
-                                                <rect key="frame" x="45" y="56" width="329" height="4"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="3" id="WXb-LE-int"/>
+                                                    <constraint firstAttribute="height" constant="3" id="O0c-h9-alC"/>
                                                 </constraints>
                                                 <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.93323183060000003" green="0.93339174989999996" blue="0.93322181699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="2rA-Mx-H9K" firstAttribute="height" secondItem="bQ2-25-f9h" secondAttribute="height" multiplier="0.875" id="02V-Df-jIO"/>
                                             <constraint firstItem="1LJ-jO-eyb" firstAttribute="leading" secondItem="Zms-dR-q8d" secondAttribute="trailing" constant="3.5" id="0wD-v4-Pe9"/>
                                             <constraint firstAttribute="bottom" secondItem="7jI-sw-Ykw" secondAttribute="bottom" constant="11" id="29J-86-pE2"/>
                                             <constraint firstItem="Zms-dR-q8d" firstAttribute="height" secondItem="nEI-gj-sLn" secondAttribute="height" id="5Cc-ta-D4r"/>
                                             <constraint firstItem="7jI-sw-Ykw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bQ2-25-f9h" secondAttribute="bottom" constant="8" id="5M6-ty-M92"/>
                                             <constraint firstItem="Zms-dR-q8d" firstAttribute="centerY" secondItem="nEI-gj-sLn" secondAttribute="centerY" id="69I-L7-7vi"/>
-                                            <constraint firstItem="L8w-8V-1O9" firstAttribute="leading" secondItem="2rA-Mx-H9K" secondAttribute="trailing" constant="2" id="6Ve-b6-Xzz"/>
-                                            <constraint firstItem="L8w-8V-1O9" firstAttribute="height" secondItem="ifZ-sO-ZGi" secondAttribute="height" multiplier="0.217391" id="OgP-qd-ph5"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zoe-4z-3Pw" secondAttribute="trailing" constant="12" id="Gmx-Ff-MNM"/>
+                                            <constraint firstItem="Zoe-4z-3Pw" firstAttribute="centerY" secondItem="7jI-sw-Ykw" secondAttribute="centerY" id="Jkf-nN-NZ0"/>
                                             <constraint firstItem="nEI-gj-sLn" firstAttribute="height" secondItem="bQ2-25-f9h" secondAttribute="height" multiplier="0.65" id="Pc6-kq-bWg"/>
                                             <constraint firstItem="bQ2-25-f9h" firstAttribute="height" secondItem="ifZ-sO-ZGi" secondAttribute="height" multiplier="0.289855" id="RYd-lp-uwO"/>
-                                            <constraint firstItem="2rA-Mx-H9K" firstAttribute="centerY" secondItem="L8w-8V-1O9" secondAttribute="centerY" id="Wgs-kB-uSS"/>
+                                            <constraint firstItem="Zoe-4z-3Pw" firstAttribute="leading" secondItem="7jI-sw-Ykw" secondAttribute="trailing" constant="9.5" id="SgT-iy-OMM"/>
                                             <constraint firstItem="bQ2-25-f9h" firstAttribute="top" secondItem="ifZ-sO-ZGi" secondAttribute="top" constant="10" id="XfN-gP-3Ec"/>
-                                            <constraint firstItem="Zoe-4z-3Pw" firstAttribute="centerY" secondItem="7jI-sw-Ykw" secondAttribute="centerY" constant="1" id="YAa-eE-7Ep"/>
                                             <constraint firstItem="bQ2-25-f9h" firstAttribute="leading" secondItem="ifZ-sO-ZGi" secondAttribute="leading" constant="8" id="YWc-Fl-CA4"/>
-                                            <constraint firstItem="L8w-8V-1O9" firstAttribute="top" secondItem="ifZ-sO-ZGi" secondAttribute="top" constant="12" id="cxd-Ov-3W1"/>
                                             <constraint firstItem="7jI-sw-Ykw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bQ2-25-f9h" secondAttribute="trailing" constant="-7" id="hdO-et-gc2"/>
-                                            <constraint firstAttribute="trailing" secondItem="L8w-8V-1O9" secondAttribute="trailing" constant="12" id="jNb-sZ-WHW"/>
                                             <constraint firstItem="1LJ-jO-eyb" firstAttribute="centerY" secondItem="Zms-dR-q8d" secondAttribute="centerY" id="o86-Yr-Sga"/>
                                             <constraint firstItem="7jI-sw-Ykw" firstAttribute="leading" secondItem="ifZ-sO-ZGi" secondAttribute="leading" constant="16.5" id="rhP-7L-342"/>
-                                            <constraint firstItem="Zoe-4z-3Pw" firstAttribute="trailing" secondItem="L8w-8V-1O9" secondAttribute="trailing" id="xOu-eJ-YjJ"/>
-                                            <constraint firstItem="Zoe-4z-3Pw" firstAttribute="leading" secondItem="nEI-gj-sLn" secondAttribute="leading" constant="-6" id="xVI-Iu-tw1"/>
                                             <constraint firstItem="nEI-gj-sLn" firstAttribute="leading" secondItem="bQ2-25-f9h" secondAttribute="trailing" constant="8.5" id="ygq-6b-4Rs"/>
                                             <constraint firstItem="1LJ-jO-eyb" firstAttribute="height" secondItem="Zms-dR-q8d" secondAttribute="height" id="ylV-3Z-88j"/>
                                             <constraint firstItem="nEI-gj-sLn" firstAttribute="centerY" secondItem="bQ2-25-f9h" secondAttribute="centerY" id="yub-Fd-Wja"/>
@@ -403,6 +402,23 @@
                         <outlet property="buttonReceive" destination="KNZ-3N-wkU" id="pY2-z1-1ko"/>
                         <outlet property="buttonSend" destination="grU-jR-tL0" id="cuE-9V-Va4"/>
                         <outlet property="constraint_stack_bottom" destination="qO7-yq-fZF" id="edq-AG-5HD"/>
+                        <outlet property="labelCPUPercentage" destination="ayx-24-If2" id="6x3-sR-Rf5"/>
+                        <outlet property="labelCpuStake" destination="39N-NO-ynb" id="Mq4-sS-nWk"/>
+                        <outlet property="labelCpuTotal" destination="yMP-ns-UlP" id="bka-eN-VUD"/>
+                        <outlet property="labelCpuUsed" destination="x7W-yb-wNO" id="aHl-az-M8z"/>
+                        <outlet property="labelEOSTokenBalance" destination="wkb-8Q-6Uk" id="OZq-HN-jyx"/>
+                        <outlet property="labelNetPercentage" destination="lgi-I9-KF8" id="hVB-GB-fpG"/>
+                        <outlet property="labelNetStake" destination="cLO-Kp-vb3" id="EGm-65-gcI"/>
+                        <outlet property="labelNetTotal" destination="eyM-rF-GqC" id="O3t-cd-lLG"/>
+                        <outlet property="labelNetUsed" destination="ZQK-wx-vjM" id="p7D-Cr-MxV"/>
+                        <outlet property="labelRAMPercentage" destination="7jI-sw-Ykw" id="OwE-jA-fHJ"/>
+                        <outlet property="labelRAMTotal" destination="1LJ-jO-eyb" id="pSr-UH-Wm2"/>
+                        <outlet property="labelRAMUsed" destination="nEI-gj-sLn" id="C8q-Cv-sJO"/>
+                        <outlet property="labelStaked" destination="tnX-bW-BgM" id="Ywm-BC-Bo1"/>
+                        <outlet property="labelUSDollarValue" destination="Vy9-YT-GNk" id="Hpr-sV-QoI"/>
+                        <outlet property="progressCPU" destination="rKG-Mr-xuJ" id="Za6-TQ-8Pe"/>
+                        <outlet property="progressNET" destination="fJM-ui-9LK" id="nT7-ds-2lo"/>
+                        <outlet property="progressRAM" destination="Zoe-4z-3Pw" id="xO4-2W-KPh"/>
                         <outlet property="viewCpu" destination="Tvc-LI-rtS" id="d4J-xg-2ua"/>
                         <outlet property="viewNet" destination="CPL-en-pbK" id="0y1-Vl-Fko"/>
                         <outlet property="viewRam" destination="ifZ-sO-ZGi" id="aE1-b3-xKo"/>
@@ -433,6 +449,6 @@
     </scenes>
     <resources>
         <image name="currency_icon" width="66" height="96"/>
-        <image name="dots_icon" width="75" height="75"/>
+        <image name="dots_icon" width="37.5" height="37.5"/>
     </resources>
 </document>

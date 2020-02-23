@@ -13,12 +13,26 @@ protocol EOSProfilePresenterProtocol: class {
     //For fetching EOS profile data
     func fetchEOSProfile()
     
+    func processAccountDataAndPassToViews(account_data: AccountModel)
 }
 
 protocol EOSProfileViewProtocol: class {
     
     //For fetching EOS profile data
     func fetchEOSProfileAPI()
-    func accountData(account_data: AccountModel)
     
+    func setNavigationTitle(stringAccountName: String)
+    
+    func setEOSBalance(stringEOSBalance: String)
+    
+    func setStakedValue(stringStakedValues: String)
+    
+    //Setting net details
+    func setNetStake(stringNetValue: String, stringNetUsed: String, stringNetTotal: String, percentage: Int)
+    
+    //Setting CPU details
+    func setCPUStake(stringCPUValue: String, stringCPUUsed: String, stringCPUTotal: String, percentage: Int)
+    
+    //Setting RAM details
+    func setRAMUsed(stringRAMUsed: String, stringRAMTotal: String, percentage: Int)
 }

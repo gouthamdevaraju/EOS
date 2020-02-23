@@ -29,6 +29,14 @@ struct AccountModel: Codable {
         var max: Int?
     }
     
+    let cpu_limit: CpuLimit?
+    struct CpuLimit: Codable {
+        
+        var used: Int?
+        var available: Int?
+        var max: Int?
+    }
+    
     var ram_usage: Int?
     
     let permissions: [Permissions]?
