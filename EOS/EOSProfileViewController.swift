@@ -189,4 +189,7 @@ extension EOSProfileViewController: EOSProfileViewProtocol{
         progressRAM.progress = Float(percentage)/100.0
     }
     
+    func setConvertedDollarValue(stringDollarValue: String){
+        labelUSDollarValue.text = stringDollarValue
+    }
 }

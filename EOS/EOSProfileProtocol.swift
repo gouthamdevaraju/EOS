@@ -35,4 +35,7 @@ protocol EOSProfileViewProtocol: class {
     
     //Setting RAM details
     func setRAMUsed(stringRAMUsed: String, stringRAMTotal: String, percentage: Int)
+    
+    //Setting converted dollar value
+    func setConvertedDollarValue(stringDollarValue: String)
 }

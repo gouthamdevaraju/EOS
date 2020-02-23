@@ -13,6 +13,11 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
     //MARK: - Properties
     var eos_profile_viewController : EOSProfileViewController? = nil
     
+    //Hardcoded dollar value
+    static let dollarValue: Float = {
+        return 4.2801
+    }()
+    
     //MARK: - Methods
     required init(view: EOSProfileViewController) {
         self.eos_profile_viewController = view
@@ -64,6 +69,14 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
             DispatchQueue.main.async {
                 self.eos_profile_viewController?.setEOSBalance(stringEOSBalance: account_EOS_balance)
             }
+            
+            let eleminated_eos_string = account_EOS_balance.replacingOccurrences(of: " EOS", with: "")
+            
+            if let eos_float_value = Float(eleminated_eos_string){
+                let converted_val = eos_float_value*EOSProfilePresenter.dollarValue
+                self.eos_profile_viewController?.setConvertedDollarValue(stringDollarValue: String(format: "= %.2f $", converted_val))
+            }
+            
         }
         
         if let voterInfo = account_data.voter_info{
@@ -81,12 +94,12 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
         if let net_limit = account_data.net_limit, let net_stake_ = account_data.net_weight{
             
             if let available = net_limit.available{
-                net_available_in_kb = getSizeString(sizeInBytes: Double(available))//"\(String(Double(available) / 1000)) KB"
+                net_available_in_kb = getSizeString(sizeInBytes: Double(available))
                 net_available_in_kb = net_available_in_kb.replacingOccurrences(of: ".", with: ",")
             }
             
             if let used = net_limit.used{
-                net_used_in_kb = getSizeString(sizeInBytes: Double(used))//"\(String(Double(used) / 1000)) KB"
+                net_used_in_kb = getSizeString(sizeInBytes: Double(used))
                 net_used_in_kb = net_used_in_kb.replacingOccurrences(of: ".", with: ",")
             }
             
@@ -132,11 +145,11 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
         var ram_qouta_in_kb = " - "
         var ram_used_in_kb = " - "
         if let ram_quota = account_data.ram_quota{
-            ram_qouta_in_kb = getSizeString(sizeInBytes: Double(ram_quota))//"\(String(Double(ram_quota) / 1000)) KB"
+            ram_qouta_in_kb = getSizeString(sizeInBytes: Double(ram_quota))
         }
         
         if let ram_usage = account_data.ram_usage{
-            ram_used_in_kb = getSizeString(sizeInBytes: Double(ram_usage))//"\(String(Double(ram_usage) / 1000)) KB"
+            ram_used_in_kb = getSizeString(sizeInBytes: Double(ram_usage))
         }
         
         var ram_percentage = 0
