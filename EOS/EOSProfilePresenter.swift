@@ -59,26 +59,21 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
     //MARK: - Process Account Data
     func processAccountDataAndPassToViews(account_data: AccountModel){
         
+        //Setting Accout Name ---------------------------
         if let account_name = account_data.account_name{
             DispatchQueue.main.async {
                 self.eos_profile_viewController?.setNavigationTitle(stringAccountName: account_name)
             }
         }
         
+        //Setting core_liquid_balance ---------------------------
         if let account_EOS_balance = account_data.core_liquid_balance{
             DispatchQueue.main.async {
                 self.eos_profile_viewController?.setEOSBalance(stringEOSBalance: account_EOS_balance)
             }
-            
-            let eleminated_eos_string = account_EOS_balance.replacingOccurrences(of: " EOS", with: "")
-            
-            if let eos_float_value = Float(eleminated_eos_string){
-                let converted_val = eos_float_value*EOSProfilePresenter.dollarValue
-                self.eos_profile_viewController?.setConvertedDollarValue(stringDollarValue: String(format: "= %.2f $", converted_val))
-            }
-            
         }
         
+        //Setting Staked Value ---------------------------
         if let voterInfo = account_data.voter_info{
             if let staked_value = voterInfo.staked{
                 DispatchQueue.main.async {
@@ -86,6 +81,21 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
                 }
             }
         }
+        
+        //NET Calculation ---------------------------
+        calculateAndProcess_NET(account_data: account_data)
+        
+        //CPU Calculation ---------------------------
+        calculateAndProcess_CPU(account_data: account_data)
+        
+        //RAM Calculation ---------------------------
+        calculateAndProcess_RAM(account_data: account_data)
+        
+        //Calculate dollar value ---------------------------
+        calculateAndProcess_DollarValue(account_data: account_data)
+    }
+    
+    func calculateAndProcess_NET(account_data: AccountModel){
         
         var net_used_in_kb = " - "
         var net_available_in_kb = " - "
@@ -114,6 +124,10 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
             self.eos_profile_viewController?.setNetStake(stringNetValue: net_stake, stringNetUsed: net_used_in_kb, stringNetTotal: net_available_in_kb, percentage: net_percentage)
         }
         
+    }
+    
+    
+    func calculateAndProcess_CPU(account_data: AccountModel){
         
         var cpu_used_in_kb = " - "
         var cpu_available_in_kb = " - "
@@ -141,6 +155,9 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
         DispatchQueue.main.async {
             self.eos_profile_viewController?.setCPUStake(stringCPUValue: cpu_stake, stringCPUUsed: cpu_used_in_kb, stringCPUTotal: cpu_available_in_kb, percentage: cpu_percentage)
         }
+    }
+    
+    func calculateAndProcess_RAM(account_data: AccountModel){
         
         var ram_qouta_in_kb = " - "
         var ram_used_in_kb = " - "
@@ -159,6 +176,22 @@ class EOSProfilePresenter: EOSProfilePresenterProtocol{
         
         DispatchQueue.main.async {
             self.eos_profile_viewController?.setRAMUsed(stringRAMUsed: ram_used_in_kb, stringRAMTotal: ram_qouta_in_kb, percentage: ram_percentage)
+        }
+    }
+    
+    func calculateAndProcess_DollarValue(account_data: AccountModel){
+        
+        if let account_EOS_balance = account_data.core_liquid_balance{
+            
+            let eleminated_eos_string = account_EOS_balance.replacingOccurrences(of: " EOS", with: "")
+            
+            if let eos_float_value = Float(eleminated_eos_string){
+                let converted_val = eos_float_value*EOSProfilePresenter.dollarValue
+                
+                DispatchQueue.main.async {
+                    self.eos_profile_viewController?.setConvertedDollarValue(stringDollarValue: String(format: "= %.2f $", converted_val))
+                }
+            }
         }
     }
     
